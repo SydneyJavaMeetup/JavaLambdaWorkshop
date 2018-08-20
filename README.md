@@ -18,3 +18,11 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
     ```
     sam init -r java8 -n starry-skies
     ```
+* Right-click POM and add as a Maven project
+* Set the JDK to 8
+* Run
+    ```bash
+    mvn clean package
+    ```
+At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.jar.
+
