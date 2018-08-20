@@ -1,7 +1,6 @@
 # JavaLambdaWorkshop
 Notes and examples for the Sydney Java Meetup's Lambda Workshop
 
-
 ## Workshop Outline
 
 ### Prerequisites
@@ -22,7 +21,33 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
 * Set the JDK to 8
 * Run
     ```bash
+    cd starry-skies
     mvn clean package
     ```
 At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.jar.
+
+### Running locally
+* Run the service:
+    ```bash
+    sam local start-api
+    ```
+* Start a browser:
+    [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
+
+### Debugging it locally
+* Add a 'remote' debug configuration in IntelliJ / equivalent Eclipse
+* Put a breakpoint in App::handler
+* Run the service:
+    ```bash
+    sam local start-api -d 9292
+    ```
+* Start a browser:
+
+    [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
+    
+    (the local lambda will pause waiting for you to attach a debugger)
+    
+    
+# BREAK
+Take a break for questions and getting everyone up to the same place.
 
