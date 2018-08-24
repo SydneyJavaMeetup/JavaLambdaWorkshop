@@ -18,7 +18,7 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
     sam init -r java8 -n starry-skies
     ```
 * Right-click POM and add as a Maven project
-* Set the JDK to 8
+* Set the JDK to 8 in IntelliJ module settings
 * Run
     ```bash
     cd starry-skies
