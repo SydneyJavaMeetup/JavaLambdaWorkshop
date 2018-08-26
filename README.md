@@ -1,4 +1,4 @@
-# JavaLambdaWorkshop
+# Java Lambda Workshop
 Notes and examples for the Sydney Java Meetup's Lambda Workshop
 
 ## Workshop Outline
@@ -12,6 +12,7 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
 * (Optional) An AWS account to deploy your code to the cloud!
 * Enthusiasm!
 
+## PART 1
 ### Project Instantiation
 * Initialize SAM CLI Java project
     ```
@@ -51,3 +52,16 @@ At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.j
 # BREAK
 Take a break for questions and getting everyone up to the same place.
 
+## PART 2
+### A Little Style
+Let's upgrade the default SAM CLI implementation with some generics and stronger typing.
+
+### Functionality
+Let's make our function do something fun!
+
+# BREAK
+## PART 3
+### Cloud Deployment
+Let's deploy our functions to AWS cloud and invoke them from the browser.
+### Cloud Monitoring
+Let's add some metrics to our function and show them on a dashboard.
