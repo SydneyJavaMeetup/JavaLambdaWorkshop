@@ -72,3 +72,28 @@ Let's make our function do something fun!
 Let's deploy our functions to AWS cloud and invoke them from the browser.
 ### Cloud Monitoring
 Let's add some metrics to our function and show them on a dashboard.
+
+```java
+private void writeMetric(String name, double value) {
+    try {
+        final AmazonCloudWatch cw =
+                AmazonCloudWatchClientBuilder.defaultClient();
+
+        MetricDatum datum = new MetricDatum()
+                .withMetricName(name)
+                .withUnit(StandardUnit.Milliseconds)
+                .withValue(value);
+
+        PutMetricDataRequest request = new PutMetricDataRequest()
+                .withNamespace("VISUALISING_PERFORMANCE")
+                .withMetricData(datum);
+
+        PutMetricDataResult putMetricDataResult = cw.putMetricData(request);
+        System.out.println(putMetricDataResult.getSdkResponseMetadata());
+
+    } catch (Exception e) {
+        System.out.println("Failed to write CloudWatch metric." + e.getMessage());
+        e.printStackTrace();
+    }
+}
+```
