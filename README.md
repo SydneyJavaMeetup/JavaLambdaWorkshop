@@ -18,14 +18,17 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
     ```
     sam init -r java8 -n starry-skies
     ```
-* Right-click POM and add as a Maven project
-* Set the JDK to 8 in IntelliJ module settings
 * Run
     ```bash
     cd starry-skies
-    mvn clean package
+    mvn clean package    
     ```
 At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.jar.
+* Open in IntelliJ for some IDE goodness
+```bash
+    idea .
+```
+* Remember to fix the module Java versions if IntelliJ didn't pick them up
 
 ### Running locally
 * Run the service:
