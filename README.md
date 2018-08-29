@@ -21,14 +21,18 @@ Notes and examples for the Sydney Java Meetup's Lambda Workshop
 * Run
     ```bash
     cd starry-skies
-    mvn clean package    
+    mvn clean test    
     ```
-At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.jar.
 * Open in IntelliJ for some IDE goodness
 ```bash
     idea .
 ```
 * Remember to fix the module Java versions if IntelliJ didn't pick them up
+* Build the package
+```
+    mvn package
+```
+At this point we should have an uber-jar in starry-skies/target/HelloWorld-1.0.jar.
 
 ### Running locally
 * Run the service:
